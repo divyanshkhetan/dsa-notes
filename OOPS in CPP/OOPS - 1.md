@@ -96,7 +96,7 @@ cout << (*s2).rollNumber;
 cout << s2 -> rollNumber;
 ```
 
-**In both the cases the data members are initialised with garbage value. If any variable is seen to be initialised with 0, it is mere coincidence.**
+- **In both the cases the data members are initialised with garbage value. If any variable is seen to be initialised with 0, it is mere coincidence.**
 
 ---
 
