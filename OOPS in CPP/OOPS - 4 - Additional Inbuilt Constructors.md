@@ -54,7 +54,7 @@ delete s1;
 ```
 
 
-We can also define our own destructor, i.e., a user defined constructor. We use tilde symbol (**~**)
+We can also define our own destructor, i.e., a user defined constructor. We use tilde symbol to define a destructor (**~**). An example of the syntax is given below:
 
 ```C++
 ~Student() {
