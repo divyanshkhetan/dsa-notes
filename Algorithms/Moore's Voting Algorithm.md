@@ -1,5 +1,8 @@
 ### Moore's Voting Algorithm
 
+Time Complexity = O(2n) -> O(n)
+Space Complexity = O(n)
+
 This algorithm is used to find a majority element in a given array of elements. A majority element is an element whose **frequency > (total_number_of_elements/2)**.
 
 Here is a great video explanation for the same: [Moore's Voting Algorithm](https://www.youtube.com/watch?v=n5QY3x_GNDg)
