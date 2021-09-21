@@ -1,11 +1,8 @@
-### Taking level-wise input and output in a tree
+### Height of a tree
 
-I couldn't find any appropriate resource for performing this on youtube. If you find any dm me on [twitter](https://twitter.com/soulfulAutumn).
+Tutorial: [Here](https://youtu.be/_pnqMz5nrRs). This tutorial is based on binary trees. We have implimented it for n-array tree. The concept is same.
 
-Traversing levelwise in an n-array tree - [Here](https://youtu.be/8r0jvz3hnzE)
-
-Below is the implementation of the levelwise input and output. You must dry run it using either digital whiteboard or traditional pen-paper. If you don't do that, you won't get the gest of the code. Also try writing the code all by yourself after studying it once. I promise you will learn a lot.
-
+Driver Code:
 ```C++
 #include <bits/stdc++.h>
 
@@ -65,18 +62,24 @@ void printTree(node* root){
 
 		for(int i = 0; i < curr->children.size(); ++i){
 			pendingNodes.push(curr -> children[i]);
-
-
  			cout << curr -> children[i] -> data << " ";
-
 		}
 		cout << endl;
 	}
 }
 
+int depthOfTree(node * root){
+	int ans = 1;
+	for(int i = 0; i < root -> children.size(); ++i){
+		int temp = depthOfTree(root -> children[i]);
+		ans = max(temp + 1, ans);
+	}
+	return ans;
+}
 
 int main(){
 	node *root = inputTree();
 	printTree(root);
+	cout << "Depth of tree = " << depthOfTree(root) << "\n";
 }
 ```
