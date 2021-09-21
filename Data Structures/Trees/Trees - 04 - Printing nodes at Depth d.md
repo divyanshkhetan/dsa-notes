@@ -1,8 +1,10 @@
-### Height of a tree
+### Printing nodes at depth d
 
-Tutorial: [Here](https://youtu.be/_pnqMz5nrRs). This tutorial is based on binary trees. We have implimented it for n-array tree. The concept is same.
+Tutorial - Not found any tutorial on youtube. I found a tutorial which was on a level upper than this one. [Here](https://youtu.be/f-oTsCUCiXk). 
 
-Driver Code:
+The only difference is that our target node is our root node.
+
+Code:
 ```C++
 #include <bits/stdc++.h>
 
@@ -68,18 +70,28 @@ void printTree(node* root){
 	}
 }
 
-int heightOfTree(node * root){
-	int ans = 1;
-	for(int i = 0; i < root -> children.size(); ++i){
-		int temp = heightOfTree(root -> children[i]);
-		ans = max(temp + 1, ans);
+int depthFlag = 0;
+
+void nodesAtDepth(node * root, int d){
+	if(d == 0){
+		cout << root -> data << " ";
+		depthFlag = 1;
 	}
-	return ans;
+
+	for(int i = 0; i < root -> children.size(); ++i){
+		nodesAtDepth(root -> children[i], d - 1);
+	}
 }
 
 int main(){
 	node *root = inputTree();
 	printTree(root);
-	cout << "Depth of tree = " << heightOfTree(root) << "\n";
+	cout << "Enter the level to be printed: ";
+	int d = 0;
+	cin >> d;
+	cout << "Nodes at that depth are: ";
+	nodesAtDepth(root, d);
+
+	if(depthFlag == 0) cout << "No nodes present at given depth";
 }
 ```
