@@ -14,3 +14,6 @@ Make sure that you checkout the [solution](https://leetcode.com/problems/binary-
 - low = 0 and high = n-1
 - low <= high
 - array must be sorted
+
+**Something interesting:**
+- [A common bug in Binary Search Algorithm](https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html)
