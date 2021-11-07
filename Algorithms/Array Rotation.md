@@ -4,8 +4,8 @@ Time Complexity - O(n)
 Space Complexity - O(1)
 
 
-[LeetCode Problem](https://leetcode.com/problems/rotate-array/)
-[Where I studied the solution](https://youtu.be/8-jkYi6kmSQ)
+- [LeetCode Problem](https://leetcode.com/problems/rotate-array/)
+- [Where I studied the solution](https://youtu.be/8-jkYi6kmSQ)
 
 
 Code in C++:
